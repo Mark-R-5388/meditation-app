@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Video Container Start */
+.video-container {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Video Container End */
+
+/* Timer Section Start */
+.timer-selection-container {
+  background: lightblue;
+  width: 20vw;
+  height: 50%;
+}
+/* Timer Section End */
+
+/* Sound Section Start */
+.sounds-selection-container {
+  background: lightcoral;
+  width: 20vw;
+  height: 50%;
+}
+/* Sound Section End */
+
+/* Background Video Section Start */
+.background-selection-container {
+  background: lightgreen;
+  width: 20vw;
+  height: 50%;
+}
+/* Background Video Section End */

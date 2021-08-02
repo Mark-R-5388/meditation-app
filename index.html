@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mediation App</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Video Start -->
+    <div class="video-container">
+      <video
+        id="video"
+        src="./Background videos/Overhead Beach.mp4"
+        autoplay
+        loop
+      >
+        Sorry, Something Went Wrong With The Video. Please Refresh and Try Again
+      </video>
+    </div>
+    <!-- Video End -->
+
+    <!-- Sound Start -->
+    <div class="audio-container">
+      <audio
+        id="audio"
+        src="./Meditation Sounds/Ocean-Waves-Relaxing.mp3"
+        controls
+        loop
+      ></audio>
+    </div>
+    <!-- Sound End -->
+
+    <!-- Timer Container Start -->
+    <div class="timer-selection-container">
+      <button class="button timer-button">5 Minutes</button>
+      <button class="button timer-button">15 Minutes</button>
+      <button class="button timer-button">30 Minutes</button>
+      <button class="button timer-button">1 hour</button>
+    </div>
+    <!-- Timer Container End -->
+
+    <!-- Sounds Container Start -->
+    <div class="sounds-selection-container">
+      <button class="button sounds-button" id="ocean-waves-1">
+        Oceans Waves 1
+      </button>
+      <button class="button sounds-button" id="ocean-waves-2">
+        Ocean Waves 2
+      </button>
+      <button class="button sounds-button" id="sea-waves">Sea Waves</button>
+    </div>
+    <!-- Sounds Container End -->
+
+    <!-- Background Selection Container Start -->
+    <div class="background-selection-container">
+      <button class="button background-button" id="overhead-beach-background">
+        Overhead Beach Background
+      </button>
+      <button class="button background-button" id="bubbles">Bubbles</button>
+    </div>
+    <!-- Background Selection Container End -->
+
+    <!-- Javascript Script -->
+    <script src="./app.js"></script>
+  </body>
+</html>
