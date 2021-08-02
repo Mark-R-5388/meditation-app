@@ -49,3 +49,11 @@ video {
   height: 50%;
 }
 /* Background Video Section End */
+
+/* Timer Countdown Section Start */
+.timer-countdown-container {
+  width: 10vw;
+  height: 30%;
+  background: lightgray;
+}
+/* Timer Countdown Section End */

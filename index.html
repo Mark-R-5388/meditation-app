@@ -14,6 +14,7 @@
       <video
         id="video"
         src="./Background videos/Overhead Beach.mp4"
+        muted
         autoplay
         loop
       >
@@ -35,10 +36,10 @@
 
     <!-- Timer Container Start -->
     <div class="timer-selection-container">
-      <button class="button timer-button">5 Minutes</button>
-      <button class="button timer-button">15 Minutes</button>
-      <button class="button timer-button">30 Minutes</button>
-      <button class="button timer-button">1 hour</button>
+      <button class="button timer-button" value="5">5 Minutes</button>
+      <button class="button timer-button" value="15">15 Minutes</button>
+      <button class="button timer-button" value="30">30 Minutes</button>
+      <button class="button timer-button" value="60">1 hour</button>
     </div>
     <!-- Timer Container End -->
 
@@ -62,6 +63,15 @@
       <button class="button background-button" id="bubbles">Bubbles</button>
     </div>
     <!-- Background Selection Container End -->
+
+    <!-- Timer Countdown Countainer Start -->
+    <div class="timer-countdown-container">
+      <h1 id="timer-display"></h1>
+      <button id="play">Play</button>
+      <button id="pause">pause</button>
+      <button id="reset">Reset</button>
+    </div>
+    <!-- Timer Countdown Countainer End -->
 
     <!-- Javascript Script -->
     <script src="./app.js"></script>

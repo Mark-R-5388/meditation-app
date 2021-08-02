@@ -10,3 +10,7 @@
 - HTML
 - CSS
 - Javascript
+
+# Things I learned
+
+- autoplay for videos does not work with chrome unless the video is muted. Good tip to know
