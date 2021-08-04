@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <!-- Title Start -->
+    <div class="title-container">
+      <h1 class="title">Meditation App</h1>
+    </div>
+    <!-- Title End -->
+
     <!-- Video Start -->
     <div class="video-container">
       <video
@@ -28,8 +34,6 @@
       <audio
         id="audio"
         src="./Meditation Sounds/Ocean-Waves-Relaxing.mp3"
-        controls
-        loop
       ></audio>
     </div>
     <!-- Sound End -->
@@ -46,10 +50,10 @@
     <!-- Sounds Container Start -->
     <div class="sounds-selection-container">
       <button class="button sounds-button" id="ocean-waves-1">
-        Oceans Waves 1
+        Waves Soothing
       </button>
       <button class="button sounds-button" id="ocean-waves-2">
-        Ocean Waves 2
+        Waves Relaxing
       </button>
       <button class="button sounds-button" id="sea-waves">Sea Waves</button>
     </div>
@@ -58,7 +62,7 @@
     <!-- Background Selection Container Start -->
     <div class="background-selection-container">
       <button class="button background-button" id="overhead-beach-background">
-        Overhead Beach Background
+        Overhead Beach
       </button>
       <button class="button background-button" id="bubbles">Bubbles</button>
     </div>
@@ -66,10 +70,13 @@
 
     <!-- Timer Countdown Countainer Start -->
     <div class="timer-countdown-container">
+      <p id="audio-track-name">Track Title</p>
       <h1 id="timer-display"></h1>
-      <button id="play">Play</button>
-      <button id="pause">pause</button>
-      <button id="reset">Reset</button>
+      <div class="timer-button-container">
+        <button class="button" id="play">Play</button>
+        <button class="button" id="pause">pause</button>
+        <button class="button" id="reset">Reset</button>
+      </div>
     </div>
     <!-- Timer Countdown Countainer End -->
 

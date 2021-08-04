@@ -14,3 +14,4 @@
 # Things I learned
 
 - autoplay for videos does not work with chrome unless the video is muted. Good tip to know
+- controlling the playback for the audio controls through javascript using some handy methods.

@@ -1,5 +1,6 @@
 const videoEl = document.querySelector('#video')
 const audioEl = document.querySelector('#audio')
+const audioName = document.querySelector('#audio-track-name')
 const timerButtons = document.querySelectorAll('.timer-button')
 const soundButtons = document.querySelectorAll('.sounds-button')
 const backgroundButtons = document.querySelectorAll('.background-button')
@@ -24,10 +25,13 @@ backgroundButtons.forEach((button) => {
 soundButtons.forEach((button) => {
   button.addEventListener('click', (e) => {
     if (e.target.id === 'ocean-waves-1') {
+      audioName.textContent = 'Waves Soothing'
       audioEl.src = './Meditation Sounds/Ocean-Waves-Relaxing.mp3'
     } else if (e.target.id === 'ocean-waves-2') {
+      audioName.textContent = 'Waves Relaxing'
       audioEl.src = './Meditation Sounds/Ocean-Waves-Sound.mp3'
     } else if (e.target.id === 'sea-waves') {
+      audioName.textContent = 'Sea Waves'
       audioEl.src = './Meditation Sounds/Sea-Waves.mp3'
     }
   })
@@ -69,6 +73,7 @@ timerButtons.forEach((button) => {
     // Play Function
     function playFunc() {
       timerIntervalId = setInterval(timerCountdown, 1000)
+      playAudio()
     }
 
     // Display Countdown Function
@@ -80,6 +85,8 @@ timerButtons.forEach((button) => {
       if (min === 00 && sec === 00) {
         timerDisplay.textContent = 'Namaste, Have a great and positive day!'
         clearInterval(timerIntervalId)
+        currentAudio.src = ''
+        playButton.removeEventListener('click', playFunc)
       } else {
         if (min < 10) {
           min = '0' + min
@@ -95,15 +102,35 @@ timerButtons.forEach((button) => {
     playButton.addEventListener('click', playFunc)
 
     // Pause Button
-    pauseButton.addEventListener('click', (e) => {
+    pauseButton.addEventListener('click', () => {
       clearInterval(timerIntervalId)
+      currentAudio.pause()
     })
 
     // Reset Button
-    resetButton.addEventListener('click', (e) => {
-      playButton.removeEventListener('click', playFunc)
+    resetButton.addEventListener('click', () => {
       clearInterval(timerIntervalId)
       timerDisplay.textContent = '00 : 00'
+      restartAudio()
+      playButton.removeEventListener('click', playFunc)
     })
   })
 })
+
+// Choose Audio Track
+
+// Audio Control
+let currentAudio = document.querySelector('#audio')
+
+function playAudio() {
+  currentAudio.play()
+  currentAudio.loop = true
+}
+
+function pauseAudio() {
+  currentAudio.pause()
+}
+
+function restartAudio() {
+  currentAudio.src = ''
+}
